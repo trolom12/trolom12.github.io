@@ -1,0 +1,454 @@
+/*----------------------------------------*/
+/*  Button CSS START
+/*---------------------------------------*/
+
+
+
+.cus-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  padding: 0  clamp(16px, 1.667vw, 64px);
+  background-color: $accent-1;
+  height: clamp(44px,2.917vw,70px);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  gap: $gap-12;
+  cursor: pointer;
+  transition: .5s;
+  font-size: clamp(14px, 0.938vw, 36px);
+  font-weight: 600;
+  font-family: $font-sec;
+  line-height: 120%;
+  text-transform: capitalize;
+  z-index: 1;
+}
+.cus-btn::before,
+.cus-btn::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: $dark-black;
+  color: $white;
+  transition: 1s ease;
+}
+span{
+  color: $white;
+}
+
+.cus-btn::before {
+  top: -1em;
+  left: 4em;
+}
+
+.cus-btn::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.cus-btn:hover::before,
+.cus-btn:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.cus-btn:hover {
+  color: $dark-black;
+}
+
+.cus-btn:active {
+  filter: brightness(.8);
+}
+
+.cus-btn {
+  svg {
+    path {
+      transition: $transition;
+    }
+  }
+}
+
+.cus-btn {
+  &:hover {
+    svg {
+      path {
+        transition: $transition;
+        fill: $white ;
+      }
+    }
+  }
+}
+
+
+
+.cus-btn-2{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $accent-1;
+  padding: 0  clamp(24px, 1.667vw, 64px);
+  background-color: $white;
+  height: 56px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  gap: $gap-12;
+  cursor: pointer;
+  transition: .5s;
+  font-size: clamp(14px, 0.938vw, 36px);
+  font-weight: 600;
+  font-family: $font-sec;
+  line-height: 120%;
+  border: 1px solid;
+  text-transform: capitalize;
+  z-index: 1;
+  span{
+    color: $accent-1;
+  }
+}
+.cus-btn-2::before,
+.cus-btn-2::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: $light-gray;
+  color: $dark-black;
+  transition: 1s ease;
+}
+
+.cus-btn-2::before {
+  top: -1em;
+  left: 3em;
+}
+
+.cus-btn-2::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.cus-btn-2:hover::before,
+.cus-btn:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.cus-btn-2:hover {
+  color: $dark-black;
+  border: 1px solid $accent-1;
+}
+
+.cus-btn-2:active {
+  filter: brightness(.8);
+}
+
+.cus-btn-2{
+  svg {
+    path {
+      transition: $transition;
+    }
+  }
+}
+
+.cus-btn-2{
+  &:hover {
+    span{
+      color: $dark-black;
+    }
+    svg {
+      path {
+        transition: $transition;
+        fill: $dark-black ;
+      }
+    }
+  }
+}
+
+
+
+.cus-btn-3{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  padding: 0  clamp(24px, 1.667vw, 64px);
+  background-color: $dark-black;
+  height: 56px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  gap: $gap-12;
+  cursor: pointer;
+  transition: .5s;
+  font-size: clamp(14px, 0.938vw, 36px);
+  font-weight: 600;
+  font-family: $font-sec;
+  line-height: 120%;
+  border: 1px solid;
+  text-transform: capitalize;
+  z-index: 1;
+}
+
+.cus-btn-3::before,
+.cus-btn-3::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: $accent-2;
+  color: $dark-black;
+  transition: 1s ease;
+}
+
+.cus-btn-3::before {
+  top: -1em;
+  left: -1em;
+}
+
+.cus-btn-3::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.cus-btn-3:hover::before,
+.cus-btn-3:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.cus-btn-3:hover {
+  color: $dark-black;
+  border: 1px solid $accent-1;
+}
+
+.cus-btn-3:active {
+  filter: brightness(.8);
+}
+
+.cus-btn-3{
+  svg {
+    path {
+      transition: $transition;
+    }
+  }
+}
+
+.cus-btn-3{
+  &:hover {
+    svg {
+      path {
+        transition: $transition;
+        fill: $dark-black ;
+      }
+    }
+  }
+}
+
+
+
+/*----------------------------------------*/
+/* scroll to top
+/*----------------------------------------*/
+.scrollToTopBtn{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background-color: $dark-black;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 19px;
+  transition: $transition;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: $dark-black;
+    transition: $transition;
+    background-color: $accent-1;
+  }
+}
+
+
+
+// SLIDER ARROWS
+.slider-arrows {
+  display: flex;
+  align-items: center;
+  gap: $gap-16;
+
+  .arrow-btn {
+    width: clamp(32px, 2.5vw, 64px);
+    height: clamp(32px, 2.5vw, 64px);
+    border-radius: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: $light-gray;
+    transition: $transition;
+    border: 1px solid $lightest-gray;
+
+    svg {
+      width: clamp(18px,1.042vw,32px);
+      height: clamp(18px,1.042vw,32px);
+      transition: $transition;
+      path{
+        stroke: $dark-black;
+        transition: $transition;
+      }
+    }
+
+    &:hover {
+      transition: $transition;
+      background-color: $accent-1;
+      path{
+        stroke: $white;
+        transition: $transition;
+      }
+    }
+  }
+}
+
+// SOCIAL ICONS
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 0.625vw, 20px);
+  @include media-query(490px){
+    gap: 16px;
+  }
+
+  &.icon-v2{
+    gap: $gap-20;
+  }
+
+  li {
+    a {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      transition: $transition;
+
+      svg {
+        width: clamp(18px,1.25vw,32px);
+        height: clamp(18px,1.25vw,32px);
+        path{
+          transition: $transition;
+        }
+      }
+
+      &:hover {
+        svg {
+          path{
+            transition: $transition;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===================  PAGINATIONS =================== // 
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+
+  #border-pagination {
+    display: flex;
+    gap: 6px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline;
+
+      span {
+        color: $dark-gray;
+        transition: $transition;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $white;
+        width: clamp(36px, 2.5vw, 64px);
+        height: clamp(36px, 2.5vw, 64px);
+        background: $light-gray;
+        float: left;
+        transition: $transition;
+        font-family: $font-primary;
+        font-size: clamp(20px, 1.198vw, 32px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 21.6px */
+        @include media-query(399px){
+          font-size: 14px;
+        }
+
+        svg {
+          path {
+            stroke: $white;
+            transition: $transition;
+          }
+        }
+
+        &.active {
+          background-color: $accent-1;
+          color: $white;
+          svg {
+            path {
+              stroke: $white;
+              transition: $transition;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $accent-1;
+          color: $white;
+
+          svg {
+            path {
+              stroke: $white;
+              transition: $transition;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        span {
+          color: $white;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}

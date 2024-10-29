@@ -1,0 +1,159 @@
+/*---------------------------------------------"
+// Template Name: Teach Me
+// Description:  Teach Me Html Template
+// Version: 1.0.0
+
+===============================================   
+STYLE SHEET INDEXING
+|
+|___ Fonts
+|___ Variables
+|___ Responsive
+|___ Reset Styles
+|___ Spacing
+|___ Helper Classes
+|___ Buttons
+|___ Headings
+|___ Layout Styles
+|___ END STYLE SHEET INDEXING
+
+--------------------------------------------*/
+
+/*-------------------------
+    Fonts
+-------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');; //Pacifico
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap'); //Cinzel Decorative
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); //Poppins
+/*-------------------------
+    Variables
+-------------------------*/
+/* Fonts */
+$font-primary: "Pacifico", sans-serif;
+$font-sec: "Poppins", sans-serif;
+$font-awesome: "Font Awesome 6 Pro";
+/* Colors */
+$accent-1: #E31777;
+$accent-2: #F5FBF7;
+$medium-black: #1e1f20;
+$dark-black: #0c0c0d;
+$light-black: #141516;
+$dark-gray: #45474f;
+$green: #01AE91;
+$orange: #FF6A24;
+$purple:#C83DFF;
+$light-gray: #92949f;
+$lightest-gray: #faf7f2;
+$white: #fafafa;
+$light-white: #FFFAEE;
+
+/* Transitions */
+$transition: all 0.3s ease-in-out;
+$duration: 6.8s;
+
+/* Border-Radius */
+$br-4: clamp(2px, 0.208vw, 8px);
+$br-8: clamp(4px, 0.417vw, 16px);
+$br-10: clamp(5px, 0.521vw, 20px);
+$br-12: clamp(8px, 0.625vw, 24px);
+$br-14: clamp(10px, 0.729vw, 28px);
+$br-16: clamp(12px, 0.833vw, 32px);
+$br-18: clamp(14px, 0.938vw, 36px);
+$br-20: clamp(16px, 1.042vw, 40px);
+$br-24: clamp(18px, 1.25vw, 48px);
+$br-32: clamp(24px, 1.667vw, 64px);
+$br-40: clamp(24px, 2.083vw, 64px);
+$br-48: clamp(24px, 2.5vw, 64px);
+
+
+
+
+/* Gap */
+$gap-4: clamp(2px, 0.208vw, 8px);
+$gap-8: clamp(4px, 0.417vw, 16px);
+$gap-10: clamp(5px, 0.521vw, 20px);
+$gap-12: clamp(8px, 0.625vw, 24px);
+$gap-14: clamp(10px, 0.729vw, 28px);
+$gap-16: clamp(12px, 0.833vw, 32px);
+$gap-18: clamp(14px, 0.938vw, 36px)!important;
+$gap-20: clamp(16px, 1.042vw, 40px)!important;
+$gap-24: clamp(18px, 1.25vw, 48px)!important;
+$gap-34: clamp(24px, 1.771vw, 64px);
+$gap-32: clamp(24px, 1.667vw, 64px);
+$gap-38: clamp(28px, 1.979vw, 76px);
+$gap-48: clamp(40px, 2.5vw, 28px);
+$gap-64: clamp(48px, 3.333vw, 128px);
+$gap-80: clamp(60px, 4.167vw, 128px);
+$gap-120:  clamp(80px, 6.25vw, 128px);
+
+
+
+/*-------------------------
+    Responsive Styles
+-------------------------*/
+@import "helpers/mixin";
+
+/*-------------------------
+    Reset Styles
+-------------------------*/
+@import "basic/basic";
+
+/*-------------------------
+Helpers
+-------------------------*/
+@import "helpers/classes";
+
+
+@import "helpers/spacing";
+
+/*-------------------------
+Elements
+-------------------------*/
+
+@import "elements/buttons";
+
+@import "elements/dropdown";
+
+@import "elements/form";
+
+@import "elements/preloader";
+
+@import "elements/video";
+
+/*-------------------------
+  layouts
+-------------------------*/
+@import "layout/header";
+
+@import "layout/hero-banner";
+
+@import "layout/date";
+
+@import "layout/member";
+
+@import "layout/heading";
+
+@import "layout/customers";
+
+@import "layout/choose";
+
+@import "layout/work";
+
+@import "layout/stories";
+
+@import "layout/pricing";
+
+@import "layout/blog";
+
+@import "layout/title-banner";
+
+@import "layout/join";
+
+@import "layout/pages";
+
+@import "layout/member-detail";
+
+@import "layout/events";
+
+@import "layout/footer";

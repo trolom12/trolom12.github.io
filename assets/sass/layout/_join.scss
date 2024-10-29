@@ -1,0 +1,33 @@
+.join {
+    background: url(../media/backgrounds/join.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: clamp(400px, 29.167vw, 700px);
+  
+    .join-block {
+        background: rgba(255, 255, 255, 0.6);
+        padding: 80px 96px;
+        height: clamp(400px, 29.167vw, 700px);
+        width: 50%;
+        display: grid;
+        align-items: center;
+        @include media-query(768px){
+            width: 65%; 
+        }
+        @include media-query(576px){
+            width: 100%; 
+        }
+        a{
+            width: 20%;
+            @include media-query(1200px){
+                width: 40%;
+            }
+            @include media-query(768px){
+                width: 60%;
+            }
+            @include media-query(576px){
+                width: max-content;
+            }
+        }
+    }
+}

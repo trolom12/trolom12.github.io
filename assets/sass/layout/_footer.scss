@@ -1,0 +1,67 @@
+footer {
+    padding: clamp(10px, 2.5vw, 60px) 0 clamp(18px, 1.25vw, 48px) 0;
+    background: linear-gradient(180deg, #5e0e33 -21.19%, #e31777 112.64%);
+    .links {
+        background: $white;
+        border-radius: 50px;
+        padding: clamp(8px, 0.625vw, 24px);
+    }
+    .footer-block{
+        padding-left: clamp(80px,6.25vw,150px);
+        .footer-links {
+            li {
+                a {
+                    p {
+                        transition: $transition;
+                        &:hover {
+                            color: $dark-black !important;
+                            transition: $transition;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .newsletter {
+        form {
+            width: 100%;
+            .input-field {
+                border-radius: 50px;
+                border: 1px solid white;
+                padding: clamp(12px, 0.833vw, 32px);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-family: $font-sec;
+                width: 100%;
+                @include media-query(490px) {
+                    width: 100%;
+                }
+                input {
+                    background: none;
+                    border: none;
+                    width: 100%;
+                    text-transform: capitalize;
+                    color: $white;
+                    &:focus {
+                        border: none;
+                        color: $white;
+                    }
+                    &:focus-visible {
+                        border: none;
+                        outline: none;
+                        color: $white;
+                    }
+                    &::placeholder {
+                        color: $white;
+                    }
+                }
+                button {
+                    flex-shrink: 0;
+                    background: none;
+                    border: none;
+                }
+            }
+        }
+    }
+}

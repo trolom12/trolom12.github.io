@@ -1,0 +1,50 @@
+.member-sec {
+    .img-block {
+        .img-member {
+            position: relative;
+            .member-data {
+                position: absolute;
+                bottom: 21px;
+                padding: 0 27px;
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+            }
+            .status-block {
+                width: fit-content;
+                position: relative;
+                margin-right: auto;
+                border-radius: 50px;
+                padding: 4px 12px;
+                background: $light-gray;
+                .icon-box {
+                    position: absolute;
+                    top: 50%;
+                    right: -10px;
+                    transform: translateY(-50%);
+                }
+            }
+            .pic {
+                display: flex;
+                gap: 6px;
+                align-items: center;
+            }
+        }
+    }
+    .member-block {
+        border-right: 0.5px solid $light-gray;
+        border-bottom: 0.5px solid $light-gray;
+        border-left: 0.5px solid $light-gray;
+        padding: clamp(18px, 1.25vw, 48px);
+        background: $white;
+    }
+}
+.download {
+    background: linear-gradient(
+        200deg,
+        rgba(240, 252, 244, 0.2) 16.65%,
+        rgba(248, 238, 225, 0.2) 66.47%,
+        rgba(255, 92, 131, 0.2) 116.29%
+    );
+}

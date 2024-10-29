@@ -1,0 +1,29 @@
+.choose{
+    overflow: hidden;
+    .choose-block{
+        .icon{
+            margin-top: -131px;
+            @include media-query(1200px){
+                margin-top: -97px;
+            }
+            @include media-query(768px){
+                margin-top: -50px;
+            }
+                @include media-query(576px){
+                    margin-top: -70px;
+                }
+        }
+    }
+    .img-block{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        .play-btn{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

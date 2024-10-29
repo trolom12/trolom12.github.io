@@ -1,0 +1,11 @@
+.date-sec{
+    .date-card{
+        padding: clamp(48px, 3.333vw, 128px) clamp(60px, 4.167vw, 128px);
+        background: $white;
+        border: 0.5px solid $accent-1;
+        .img-card{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

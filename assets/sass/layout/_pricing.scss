@@ -1,0 +1,9 @@
+.pricing{
+    .pricing-card{
+        border: 1px solid $accent-1;
+        padding: clamp(18px, 1.25vw, 48px);
+        .cards{
+            padding: clamp(18px, 1.25vw, 48px) 0;
+        }
+    }
+}

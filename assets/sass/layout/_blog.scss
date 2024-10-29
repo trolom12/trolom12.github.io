@@ -1,0 +1,383 @@
+.blog {
+  .blog-block {
+    padding: clamp(12px, 0.833vw, 32px) clamp(12px, 0.833vw, 32px) clamp(10px, 2.5vw, 60px);
+    background: $white;
+  }
+  .blog-blocks {
+    padding: clamp(12px, 0.833vw, 32px) clamp(12px, 0.833vw, 32px) clamp(10px, 2.5vw, 60px);
+    border-right: 0.5px solid $light-gray;
+    border-bottom: 0.5px solid $light-gray;
+    border-left: 0.5px solid $light-gray;
+  }
+  .user {
+    margin-top: -28px;
+    @include media-query(576px) {
+      margin-top: -5px;
+    }
+  }
+}
+.blog-sec {
+  .blog-blocks {
+    padding: clamp(12px, 0.833vw, 32px) clamp(12px, 0.833vw, 32px) clamp(10px, 2.5vw, 60px);
+    border-right: 0.5px solid $light-gray;
+    border-bottom: 0.5px solid $light-gray;
+    border-left: 0.5px solid $light-gray;
+  }
+  .user {
+    margin-top: -28px;
+  }
+  form {
+    position: relative;
+    input {
+      border: 0.5px solid $light-gray;
+      padding: 0 0 0 clamp(12px, 0.833vw, 32px);
+      height: 56px;
+      width: 100%;
+      color: $light-gray;
+      font-family: $font-sec;
+      font-size: clamp(15px, 0.938vw, 25px);
+      &::placeholder {
+        color: $light-gray;
+      }
+      &:focus {
+        border: 0.5px solid $light-gray;
+        outline: none;
+      }
+      &:focus-visible {
+        border: 0.5px solid $light-gray;
+        outline: none;
+      }
+    }
+    button {
+      position: absolute;
+      top: 0px;
+      background: $accent-2;
+      border-top: 1px solid  $accent-2;
+      border-right: 1px solid  $accent-2;
+      border-bottom: 1px solid  $accent-2;
+      border: none;
+      right: -2px;
+      padding: clamp(12px, 0.833vw, 32px) clamp(24px, 1.667vw, 64px);
+      height: 2.917vw;
+      @include media-query(1600px) {
+        height: 3.917vw;
+      }
+      @include media-query(1400px) {
+        height: 4.021vw;
+      }
+      @include media-query(1200px) {
+        height: 56px;
+        right: -4px;
+      }
+    }
+    .ui-checkbox {
+      --primary-color: #fca95d;
+      --secondary-color: #fff;
+      --primary-hover-color: #fca95d;
+      --checkbox-diameter: 20px;
+      --checkbox-border-radius: 5px;
+      --checkbox-border-color: #d9d9d9;
+      --checkbox-border-width: 1px;
+      --checkbox-border-style: solid;
+      --checkmark-size: 1.2;
+    }
+
+    .ui-checkbox,
+    .ui-checkbox *,
+    .ui-checkbox *::before,
+    .ui-checkbox *::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .ui-checkbox {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: var(--checkbox-diameter);
+      height: var(--checkbox-diameter);
+      border-radius: var(--checkbox-border-radius);
+      background: var(--secondary-color);
+      border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .ui-checkbox::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+      box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+      border-radius: inherit;
+      opacity: 0;
+      -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+      -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+      transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+    }
+
+    .ui-checkbox::before {
+      top: 40%;
+      left: 50%;
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 7px;
+      border-right: 2px solid var(--secondary-color);
+      border-bottom: 2px solid var(--secondary-color);
+      -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+      -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+      transform: translate(-50%, -50%) rotate(45deg) scale(0);
+      opacity: 0;
+      -webkit-transition:
+        all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),
+        opacity 0.1s;
+      -o-transition:
+        all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),
+        opacity 0.1s;
+      transition:
+        all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),
+        opacity 0.1s;
+    }
+
+    /* actions */
+
+    .ui-checkbox:hover {
+      border-color: var(--primary-color);
+    }
+
+    .ui-checkbox:checked {
+      background: var(--primary-color);
+      border-color: transparent;
+    }
+
+    .ui-checkbox:checked::before {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+      -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+      transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+      -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+      -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+      transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    }
+
+    .ui-checkbox:active:not(:checked)::after {
+      -webkit-transition: none;
+      -o-transition: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      transition: none;
+      opacity: 1;
+    }
+  }
+  .img-box {
+    overflow: hidden;
+    &:hover {
+      img {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        -webkit-transition: all 0.6s linear 0s;
+        transition: all 0.6s linear 0s;
+      }
+    }
+  }
+  .text-block {
+    transition: $transition;
+    h6,
+    a {
+    }
+    &:hover {
+      h6,
+      a {
+        transition: $transition;
+        color: $accent-2;
+      }
+      svg {
+        path {
+          stroke: $accent-2;
+          transition: $transition;
+        }
+      }
+    }
+  }
+  .latest-article {
+    background-color: $white;
+    padding: clamp(18px, 1.25vw, 48px);
+    border: 0.5px solid $light-gray;
+    .recent-blog {
+      .text-block {
+        p {
+          transition: $transition;
+        }
+      }
+      &:hover {
+        p {
+          color: $accent-2;
+          transition: $transition;
+        }
+      }
+    }
+  }
+  .services-block {
+    border: 0.5px solid $light-gray;
+    padding: clamp(18px, 1.25vw, 48px);
+  }
+  .rating-block {
+    border: 0.5px solid $light-gray;
+    padding: clamp(18px, 1.25vw, 48px);
+
+    .ui-checkbox {
+      --primary-color: #fca95d;
+      --secondary-color: #fff;
+      --primary-hover-color: #fca95d;
+      --checkbox-diameter: 20px;
+      --checkbox-border-radius: 5px;
+      --checkbox-border-color: #d9d9d9;
+      --checkbox-border-width: 1px;
+      --checkbox-border-style: solid;
+      --checkmark-size: 1.2;
+    }
+
+    .ui-checkbox,
+    .ui-checkbox *,
+    .ui-checkbox *::before,
+    .ui-checkbox *::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .ui-checkbox {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: var(--checkbox-diameter);
+      height: var(--checkbox-diameter);
+      border-radius: var(--checkbox-border-radius);
+      background: var(--secondary-color);
+      border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .ui-checkbox::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+      box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+      border-radius: inherit;
+      opacity: 0;
+      -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+      -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+      transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+    }
+
+    .ui-checkbox::before {
+      top: 40%;
+      left: 50%;
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 7px;
+      border-right: 2px solid var(--secondary-color);
+      border-bottom: 2px solid var(--secondary-color);
+      -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+      -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+      transform: translate(-50%, -50%) rotate(45deg) scale(0);
+      opacity: 0;
+      -webkit-transition:
+        all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),
+        opacity 0.1s;
+      -o-transition:
+        all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),
+        opacity 0.1s;
+      transition:
+        all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),
+        opacity 0.1s;
+    }
+
+    /* actions */
+
+    .ui-checkbox:hover {
+      border-color: var(--primary-color);
+    }
+
+    .ui-checkbox:checked {
+      background: $accent-1;
+      border-color: transparent;
+    }
+
+    .ui-checkbox:checked::before {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+      -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+      transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+      -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+      -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+      transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    }
+
+    .ui-checkbox:active:not(:checked)::after {
+      -webkit-transition: none;
+      -o-transition: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      transition: none;
+      opacity: 1;
+    }
+  }
+  .follow {
+    border: 0.5px solid $light-gray;
+    padding: clamp(18px, 1.25vw, 48px);
+    .links-container {
+      background: none;
+      display: flex;
+      align-items: center;
+      gap: clamp(4px, 0.417vw, 16px);
+      border-radius: 50%;
+      .links {
+        background: none;
+        border-radius: 50%;
+        border: 1px solid $accent-1;
+        padding: 12px;
+        width: 48px;
+        height: 48px;
+        svg {
+          display: grid;
+          width: 24px;
+          height: 24px;
+          align-items: center;
+          path {
+            fill: $accent-1;
+          }
+        }
+        &:hover {
+          background: $accent-1;
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .block-detail {
+    border-radius: $br-12;
+    border-left: 2px solid $accent-1;
+    background: rgba(227, 23, 119, 0.2);
+    padding: clamp(18px, 1.25vw, 48px);
+  }
+}

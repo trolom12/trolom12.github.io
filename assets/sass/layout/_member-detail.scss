@@ -1,0 +1,308 @@
+.member {
+    .member-detail {
+        background: url(../media/backgrounds/member.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: clamp(24px, 1.667vw, 64px);
+        .about-img {
+            margin-bottom: -46px;
+            @include media-query(1400px){
+            margin-bottom: -35px;
+
+            }
+        }
+        label {
+            padding: 8px;
+            border: 0.5px solid $accent-1;
+            background: $white;
+            display: flex;
+            gap: $gap-8;
+            position: absolute;
+            font-family: $font-sec;
+            top: 32px;
+            color: $accent-1;
+            right: 32px;
+        }
+        .message {
+            display: flex;
+            gap: $gap-120;
+            text-wrap: nowrap;
+            align-items: end;
+            @include media-query(1200px){
+                display: none;
+            }
+            .links {
+                width: clamp(10px, 2.5vw, 60px);
+                height: clamp(10px, 2.5vw, 60px);
+                border-radius: 50px;
+                background: $white;
+                padding: 8px;
+                @include media-query(1400px){
+                    width: clamp(30px,3.865vw,60px);
+                    height: clamp(30px,3.865vw,60px);
+                    padding: 12px;
+                }
+            }
+        }
+    }
+}
+    .tabs-block{
+        .services-tabs{
+                background-color: $accent-1;
+                padding: clamp(18px, 1.25vw, 48px) 0;
+                .polygen {
+                    background: $white;
+                    padding: 0px 2px;
+                    border-radius: 1px;
+                    position: relative;
+                    .icon {
+                        position: absolute;
+                        top: -2px;
+                        left: -7px;
+                    }
+                }
+
+         }
+     }
+    .tabs-block-2 {
+        .services-tabs{
+            padding: clamp(18px, 1.25vw, 48px) clamp(10px, 2.5vw, 60px);
+            background-color: $accent-1;
+            svg {
+                path {
+                    fill: $white;
+                }
+            }
+
+        }
+        .public-block{
+            border: 0.5px solid $accent-1;
+            background: $accent-2;
+            padding: clamp(18px, 1.25vw, 48px) 0;
+            .text-block{
+                padding: 0 clamp(25px, 2.5vw, 60px);
+                button{
+                    border: none;
+                }
+                .like{
+                    cursor: pointer;
+                }
+                .share{
+                    cursor: pointer;
+                }
+                form{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .btn{
+                        border: none;
+                    }
+                }
+            }
+            .public{
+                display: flex;
+                gap: 6px ;
+                padding: 2px 8px;
+                background: $light-gray;
+                align-items: center;
+            }
+        }
+        form {
+            position: relative;
+                input {
+                border: 0.5px solid $light-gray;
+                padding: 0 0 0 clamp(12px, 0.833vw, 32px);
+                height: 56px;
+                width: 100%;
+                background: $accent-2;
+                color: $light-gray;
+                font-family: $font-sec;
+                font-size: clamp(15px, 0.938vw, 25px);
+                &::placeholder {
+                    color: $light-gray;
+                }
+                &:focus{
+                    border: 0.5px solid $light-gray;
+                    outline: none;
+                }
+                &:focus-visible{
+                    border: 0.5px solid $light-gray;
+                    outline: none;
+                }
+            }
+              .v2{
+                position: absolute;
+                top: 0px;
+                background: $accent-1;
+                border-radius: 0;
+                border: none;
+                right: -2px;
+                padding: clamp(12px, 0.833vw, 32px) clamp(24px, 1.667vw, 64px);
+                height: 2.917vw;
+                @include media-query(1600px) {
+                    height: 3.917vw;
+                }
+                @include media-query(1400px) {
+                    height: 4.021vw;
+                }
+                @include media-query(1200px) {
+                    height: 56px;
+                    right: -4px;
+                }
+            }
+        }
+        .follow{
+            background: $accent-2;
+            border: 0.5px solid $light-gray;
+            padding: clamp(18px, 1.25vw, 48px);
+            .links-container{
+                background: none;
+                display: flex;
+                align-items: center;
+                gap: clamp(4px, 0.417vw, 16px);
+                border-radius: 50%;
+                .links{
+                    background: none;
+                    border-radius: 50%;
+                    border: 1px solid $accent-1;
+                    padding: 12px;
+                    width: 48px;
+                    height: 48px;
+                   svg{
+                   display: grid;
+                   width: 24px;
+                   height: 24px;
+                   align-items: center;
+                   path{
+                    fill:$accent-1;
+                }
+                   }
+                   &:hover{
+                       background: $accent-1;
+                       svg{
+                           path{
+                               fill:$white;
+                           }
+                       }
+                   }
+                }
+            }
+        }
+        .click-away{
+            border: 0.5px solid $accent-1;
+            background: $accent-2;
+            padding: clamp(18px, 1.25vw, 48px);
+            p{
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; 
+                 line-clamp: 3; 
+                -webkit-box-orient: vertical;
+            }
+            .wrapper-dropdown{
+                width: 100%;
+                background: none;
+                border: 0.5px solid $light-gray;
+                .topbar-dropdown{
+                    background: $light-gray;
+                }
+            }
+                
+        }
+    }
+    .tab-pane{
+        .img-member {
+            position: relative;
+            .member-data {
+                position: absolute;
+                bottom: 21px;
+                padding: 0 27px;
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+            }
+            .status-block {
+                width: fit-content;
+                position: relative;
+                margin-right: auto;
+                border-radius: 50px;
+                padding: 4px 12px;
+                background: $light-gray;
+                .icon-box {
+                    position: absolute;
+                    top: 50%;
+                    right: -10px;
+                    transform: translateY(-50%);
+                }
+            }
+            .pic {
+                display: flex;
+                gap: 6px;
+                align-items: center;
+            }
+        }
+        .member-block{
+            padding: 32px;
+            border-left:0.5px solid $light-gray ;
+            border-right: 0.5px solid $light-gray ;
+            border-bottom: 0.5px solid $light-gray ;
+        }
+        .profile-block{
+            border: 0.5px solid $accent-1;
+            background: $accent-2;
+            .text-block{
+                padding:clamp(18px, 1.25vw, 48px) clamp(10px, 2.5vw, 60px);
+            }
+            .texts-block{
+                padding: 0px  clamp(10px, 2.5vw, 60px) clamp(18px, 1.25vw, 48px);
+            }
+        }
+    }
+    .nav-link{
+      span{
+        color: $white;
+      }
+         &.active{
+            background: $white;
+            span{
+                color: $accent-1;
+              }
+            svg{
+                path{
+                    fill:$accent-1;
+                }
+            }
+         }
+    }
+    .tab-pan{
+        .img-member {
+            position: relative;
+            .online {
+                position: absolute;
+                bottom: 21px;
+                right: 337px;
+                border-radius: 50px;
+                padding: 4px 12px;
+                background: $light-gray;
+                @include media-query(1600px){
+                    right: 229px;
+                }
+            }
+            .icon-box{
+                position: absolute;
+                bottom: 29px;
+                right: 327px;
+                @include media-query(1600px){
+                    right: 219px;
+                }
+            }
+        }
+        .member-block{
+            padding: 32px;
+            border-left:0.5px solid $light-gray ;
+            border-right: 0.5px solid $light-gray ;
+            border-bottom: 0.5px solid $light-gray ;
+        }
+    }

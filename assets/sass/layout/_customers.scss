@@ -1,0 +1,46 @@
+.customers{
+    .customers-block{
+     position: relative;
+       .img-1{
+        position: absolute;
+        top: 7px;
+        @include media-query(1200px){
+        display:none
+       }
+    }
+       .img-2{
+        position: absolute;
+        top: 246px;
+        @include media-query(1200px){
+            display:none
+           }
+       }
+       .img-3{
+        position: absolute;
+        top: 71px;
+        left: 377px;
+        @include media-query(1200px){
+            display:none
+           }
+       }
+       .img-4{
+        position: absolute;
+        bottom: -130px;
+        left: -101px;
+        @include media-query(1200px){
+            display:none
+           }
+       }
+       .main-img{
+        position: relative;
+    }
+    .img-5{
+        position: absolute;
+        bottom: -17px;
+        right: -36px;
+        @include media-query(1200px){
+            display:none
+           }
+       }
+}
+}

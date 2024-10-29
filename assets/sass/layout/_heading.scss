@@ -1,0 +1,32 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.tabs-sec{
+    background: #FDF3DB;
+    .services-tabs{
+        ul{
+            padding: 16px;
+            background-color: $light-white;
+            border-radius: 50px;
+            border: 0.5PX solid $light-gray;
+            display: flex;
+            gap: 16px;
+            button{
+                padding: 4px 16px;
+               border-radius: 50px;
+               background: #FDF3DB;
+               color: $dark-gray;
+               font-weight: 500;
+               .nav-link{
+                   &:active{
+                    background: $accent-2;
+                   }
+
+               }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.work {
+    background: url("../media/backgrounds/bg2.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    .work-blocks {
+        @include media-query(576px) {
+            flex-wrap: wrap;
+        }
+        .block-1 {
+            width: clamp(450px, 28.021vw, 650px);
+            position: relative;
+            .line-img {
+                position: absolute;
+                top: 61px;
+                left: 274px;
+                height: 10.26vw;
+                width: 21.625vw;
+                @include media-query(1600px) {
+                    left: 226px;
+                    height: 12.26vw;
+                    width: 19.625vw;
+                }
+                @include media-query(1400px) {
+                    top: 66px;
+                    left: 223px;
+                }
+                @include media-query(1200px) {
+                    top: 64px;
+                    left: 232px;
+                    height: 12.26vw;
+                    width: 25.625vw;
+                }
+                @include media-query(1024px) {
+                    display: none;
+                }
+            }
+            .img-block {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .block-2 {
+            width: clamp(450px, 28.021vw, 650px);
+            position: relative;
+            @include media-query(768px) {
+                flex-direction: column-reverse;
+                display: flex;
+                align-items: center;
+            }
+            .line-img-2 {
+                position: absolute;
+                position: absolute;
+                top: 34px;
+                left: 275px;
+                height: 12.26vw;
+                width: 21.625vw;
+                @include media-query(1600px) {
+                    top: 35px;
+                    left: 274px;
+                    height: 13.26vw;
+                    width: 19.625vw;
+                }
+                @include media-query(1400px) {
+                    top: 63px;
+                    left: 221px;
+                }
+                @include media-query(1200px) {
+                    top: 64px;
+                    left: 232px;
+                    height: 12.26vw;
+                    width: 25.625vw;
+                }
+
+                @include media-query(1024px) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .img-block {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+}
+.block-3 {
+    width: clamp(450px, 28.021vw, 650px);
+    position: relative;
+    .img-block {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

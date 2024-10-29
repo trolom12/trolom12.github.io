@@ -1,0 +1,436 @@
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul.list-style,
+ol.list-style {
+  padding: 0;
+}
+
+ul.list-style li::marker,
+ol.list-style li::marker {
+  color: $accent-1;
+}
+
+.unstyled {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.container-fluid {
+  @media (min-width: 1200px) {
+    padding: 0 5vw;
+    width: 100%;
+  }
+  padding-right: calc(var(--bs-gutter-x)* .75);
+  padding-left: calc(var(--bs-gutter-x)* .75);
+
+  @media (max-width: 575px) {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+  }
+  
+}
+
+.container-fluid-2{
+  @media (min-width: 1200px) {
+    overflow: hidden;
+    padding-left: 5vw;
+    width: 100%;
+  }
+  padding-right: calc(var(--bs-gutter-x)* .75);
+  padding-left: calc(var(--bs-gutter-x)* .75);
+
+  @media (max-width: 575px) {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+  }
+  
+}
+.container-fluid-3{
+  @media (min-width: 1200px) {
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+  }
+  padding-right: calc(var(--bs-gutter-x)* .75);
+  padding-left: calc(var(--bs-gutter-x)* .75);
+
+  @media (max-width: 575px) {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+  }
+  
+}
+.container-fluid-4{
+  @media (min-width: 991px) {
+    padding: 0 clamp(100px,12.604vw,300px);
+    width: 100%;
+  }
+  padding-right: calc(var(--bs-gutter-x)* .75);
+  padding-left: calc(var(--bs-gutter-x)* .75);
+
+  @media (max-width: 575px) {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+  }
+}
+
+.page-content {
+  margin: clamp(14px, 1.198vw, 40px) 0;
+}
+.x-hidden{
+  overflow-x: hidden;
+}
+
+/*-------------------------
+  Typography
+-------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  color: $dark-gray;
+  background: $white ;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: clamp(16px, 0.938vw, 22px);
+  font-weight: 400;
+  line-height: 140%;
+  height: 100%;
+  @include media-query(490px){
+    font-size: 14px;
+  }
+}
+.background-image{
+  background:  url(../media/backgrounds/body.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+a {
+  text-decoration: none;
+  color: unset;
+  transition: $transition;
+
+  &:hover {
+  transition: $transition;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+p,
+pre,
+blockquote,
+table,
+hr {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    color: inherit;
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-bottom: 0;
+}
+
+
+h1,
+.h1 {
+  font-family: $font-primary;
+  font-size: clamp(45px, 3.594vw, 75px); /* 69px */
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: -2.07px;
+@include media-query(992px){
+  font-size: clamp(38px, 3.594vw, 75px); /* 69px */
+
+}
+}
+
+h2,
+.h2 {
+  font-family: $font-primary;
+  font-size: clamp(33px, 2.865vw, 110px); /* 55px */
+  font-weight: 500;
+  line-height: 120%;
+  @media (max-width: 991px) {
+    font-size: clamp(27px, 3.78vw, 36px);
+  }
+  @media (max-width: 767px) {
+    font-size: clamp(24px, 4.219vw, 30px);
+  }
+  @media (max-width: 575px) {
+    font-size: clamp(20px, 5.897vw, 26px);
+  }
+}
+
+h3,
+.h3 {
+  font-family: $font-primary;
+  font-size: clamp(30px, 2.292vw, 50px); /* 44px */
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+
+  @include media-query(1200px) {
+    font-size: clamp(24px, 2.086vw, 48px); /* 37px */
+  }
+
+  @include media-query(820px) {
+    font-size: clamp(28px, 2.902vw, 38px); /* 32px */
+  }
+}
+
+h4,
+.h4 {
+  font-size: clamp(32px, 1.823vw, 48px); /* 35px */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+
+  @include media-query(1199px) {
+    font-size: clamp(29px, 2.752vw, 40px); /*33px */
+  }
+
+  @include media-query(820px) {
+    font-size: clamp(23px, 3.293vw, 30px); /* 27px */
+  }
+}
+
+h5,
+.h5 {
+  font-size: clamp(24px, 1.458vw, 38px); /* 28px */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  @include media-query(1199px) {
+    font-size: clamp(23px, 2.085vw, 32px); /*25px*/
+  }
+
+  @include media-query(820px) {
+    font-size: clamp(19px, 2.439vw, 24px); /*20px */
+  }
+}
+
+h6,
+.h6 {
+  font-size: clamp(20px, 1.198vw, 32px); /*23px*/
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  @include media-query(1199px) {
+    font-size: clamp(21px, 1.918vw, 28px);
+  }
+
+  @include media-query(820px) {
+    font-size: clamp(18px, 2.317vw, 21px);
+  }
+}
+
+span {
+  display: inline-block;
+
+}
+
+b,
+strong {
+  font-family: $font-primary;
+}
+
+
+p {
+  font-family: $font-sec;
+  font-size: clamp(15px, 0.938vw, 25px);//18px
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; 
+  @include media-query(992px){
+    font-size: clamp(13px, 0.938vw, 25px);
+  }
+  @include media-query(399px){
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+.text {
+  font-family: $font-sec;
+  font-size: clamp(15px, 0.938vw, 25px);//18px
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 120%; /* 21.6px */
+}
+.lead{
+  font-size: 14px; /* 14px */
+  font-family: $font-primary;
+  font-style: normal;
+  font-size: clamp(15px,1.146vw, 30px); //22px
+  font-weight: 400;
+  line-height: 120%; 
+  @include media-query(1499px){
+    font-size: 15px;
+  }
+}
+
+.eye-brow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-primary;
+  text-transform: uppercase;
+  &::before{
+    content:"";
+    width: 32px;
+    height: 3px;
+    background-color: $dark-gray;
+  }
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(12px, 0.729vw, 22px); /* 14px */
+  line-height: 120%; 
+  @include media-query(1499px){
+    font-size: 15px;
+  }
+}
+.eye-brow-2{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-sec;
+  text-transform: uppercase;
+  &::before{
+    content:"";
+    width: 32px;
+    height: 3px;
+    background: $accent-1;
+ }
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(12px, 0.729vw, 22px); /* 14px */
+  line-height: 120%; 
+  @include media-query(1499px){
+    font-size: 15px;
+  }
+}  
+.eye-brow-3{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-primary;
+  text-transform: uppercase;
+  &::before{
+    content:"";
+    width: 32px;
+    height: 3px;
+    background-color: $accent-1;
+  }
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(12px, 0.729vw, 22px); /* 14px */
+  line-height: 120%; 
+  @include media-query(1499px){
+    font-size: 15px;
+  }
+}
+.caption{
+  font-size: clamp(12px, 0.625vw, 16px);  /* 12px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; 
+  @include media-query(1499px){
+    font-size: 13px;
+  }
+}
+.link{
+  font-size: clamp(12px, 0.625vw, 16px);  /* 12px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; 
+  @include media-query(1499px){
+    font-size: 13px;
+  }
+}
+.subtitle{
+  font-size: clamp(10px,0.729vw,16px); 
+  font-family: $font-sec;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; 
+  @include media-query(1499px){
+    font-size: 15px;
+  }
+}
+span {
+  display: inline-block;
+}
+
+b,
+strong {
+  font-family: $font-primary;
+}
+
+.hr{
+  width: 100%;
+  height: 1px;
+  border-top: 2px dashed $light-gray;
+  margin-bottom: clamp(25px, 2.5vw, 60px);
+  margin-top: clamp(25px, 2.5vw, 60px);
+}
+.hr-line{
+  width: 100%;
+  height: 1px;
+  background: $light-gray;
+
+}
+.vr-line{
+  width: 1px;
+  height: auto;
+  background: $light-gray;
+}
